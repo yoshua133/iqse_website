@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="peopleform.php"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="492"
+ height="900"
+ bkcolor="0xFFFFFF"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0xFFFFFF"
+ themecolor="0xFFFF99"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The e-mail address you entered does not match!"
+ reqmessage="One or more fields are required."
+ invalidemailmsg="does not appear to be a valid e-mail address. Would you like to change it?"
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="true"
+ disableclicktoactiveprompt="true"
+ extensions="*.jpeg;*.png"
+>
+
+<hidden
+ name="thankyoupage"
+ value="http://ctp.tamu.edu/peopleform.html"
+></hidden>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<textinput
+ name="first"
+ x="150"
+ y="100"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="100"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="last"
+ x="150"
+ y="125"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="email"
+ x="150"
+ y="150"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="100"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<textinput
+ name="oloc"
+ x="150"
+ y="174"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="ophone"
+ x="150"
+ y="225"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="lloc"
+ x="150"
+ y="250"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="lphone"
+ x="150"
+ y="299"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="fphone"
+ x="150"
+ y="324"
+ w="175"
+ h="22"
+ initvalue="979-845-2590"
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+  restrict="phone"
+>
+</textinput>
+
+<textinput
+ name="title"
+ x="150"
+ y="349"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="150"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="title2"
+ x="150"
+ y="375"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="150"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="title3"
+ x="150"
+ y="400"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="150"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="dept"
+ x="150"
+ y="424"
+ w="175"
+ h="22"
+ initvalue="none or e.g., Quantum Optics"
+ maxchars="100"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="uname"
+ x="150"
+ y="449"
+ w="175"
+ h="22"
+ initvalue="First Initial+ Last Name"
+ maxchars="50"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="classification"
+ x="150"
+ y="474"
+ w="175"
+ h="22"
+ initvalue="ug, gs, researcher, faculty, visitor"
+ maxchars="10"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="groupid"
+ x="150"
+ y="499"
+ w="175"
+ h="22"
+ initvalue="e.g., mscully"
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="status"
+ x="150"
+ y="550"
+ w="175"
+ h="22"
+ initvalue="Active, Inactive"
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="date"
+ x="150"
+ y="575"
+ w="175"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+  restrict="date"
+>
+</textinput>
+
+<textinput
+ name="waddress"
+ x="150"
+ y="600"
+ w="175"
+ h="22"
+ initvalue="none or http://"
+ maxchars="100"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textarea
+ name="description"
+ x="125"
+ y="626"
+ w="226"
+ h="149"
+ initvalue=""
+ maxchars="2800"
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<submitbutton
+ name="Submit Button"
+ x="123"
+ y="790"
+ w="76"
+ h="20"
+ label="Submit"
+ fontname="Arial"
+ fontcolor="0x000000"
+  fontsize="12"
+></submitbutton>
+
+<resetbutton
+ name="Reset Button"
+ x="249"
+ y="790"
+ w="76"
+ h="20"
+ label="Reset"
+ fontname="Arial"
+ fontcolor="0x000000"
+  fontsize="12"
+></resetbutton>
+
+<label
+ name="My Text 1"
+ x="50"
+ y="25"
+ w="321"
+ h="22"
+ text="Add a New Person to IQSE Database"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="19"
+></label>
+
+<label
+ name="My Text 2"
+ x="48"
+ y="99"
+ w="94"
+ h="18"
+ text="**First name:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 3"
+ x="19"
+ y="149"
+ w="123"
+ h="18"
+ text="**Email Address:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 4"
+ x="17"
+ y="174"
+ w="125"
+ h="18"
+ text="**Office Location:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 5"
+ x="50"
+ y="199"
+ w="240"
+ h="16"
+ text="(4 digit building code plus Room number)"
+  fontname="Arial"
+  fontcolor="0xFF0000"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 6"
+ x="32"
+ y="224"
+ w="110"
+ h="18"
+ text="**Office Phone:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 7"
+ x="41"
+ y="249"
+ w="99"
+ h="18"
+ text="Lab Location:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 8"
+ x="50"
+ y="275"
+ w="237"
+ h="16"
+ text="(4 digit building code and Room number)"
+  fontname="Arial"
+  fontcolor="0xFF0000"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 9"
+ x="55"
+ y="299"
+ w="84"
+ h="18"
+ text="Lab Phone:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 10"
+ x="70"
+ y="450"
+ w="70"
+ h="18"
+ text="**Uname:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 11"
+ x="50"
+ y="124"
+ w="93"
+ h="18"
+ text="**Last name:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 12"
+ x="18"
+ y="350"
+ w="123"
+ h="18"
+ text="**Position Title 1:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 13"
+ x="17"
+ y="424"
+ w="125"
+ h="18"
+ text="**Area of Interest:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 14"
+ x="49"
+ y="324"
+ w="90"
+ h="18"
+ text="Fax number:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 15"
+ x="27"
+ y="474"
+ w="114"
+ h="18"
+ text="**Classification:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 17"
+ x="163"
+ y="53"
+ w="112"
+ h="16"
+ text="(**Fields Required)"
+  fontname="Arial"
+  fontcolor="0xFF0000"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 16"
+ x="18"
+ y="627"
+ w="100"
+ h="18"
+ text="**Description:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 18"
+ x="88"
+ y="500"
+ w="51"
+ h="18"
+ text="Group:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 19"
+ x="30"
+ y="375"
+ w="111"
+ h="18"
+ text="Position Title 2:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 20"
+ x="30"
+ y="400"
+ w="111"
+ h="18"
+ text="Position Title 3:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 21"
+ x="75"
+ y="550"
+ w="64"
+ h="18"
+ text="**Status:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 22"
+ x="25"
+ y="575"
+ w="101"
+ h="18"
+ text="Date Entered:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 23"
+ x="39"
+ y="600"
+ w="98"
+ h="18"
+ text="**Homepage:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<label
+ name="My Text 24"
+ x="25"
+ y="525"
+ w="104"
+ h="18"
+ text="**Work Group:"
+  fontname="Arial"
+  fontcolor="0x000000"
+  fontsize="16"
+></label>
+
+<textinput
+ name="workgroup"
+ x="150"
+ y="525"
+ w="175"
+ h="22"
+ initvalue="Enter Professor&apos;s name"
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+</form>

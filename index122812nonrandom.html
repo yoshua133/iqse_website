@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="created" content="Wed, 17 Nov 2010 21:05:45 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IQSE index</title>
+
+<LINK REL=StyleSheet HREF="person.css" TITLE="basic-1"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
+ 
+<!--<meta http-equiv="Content-Language" content="en-us">-->
+
+<script>
+// (C) 2000 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this header
+// NS4-6,IE4-6
+// Fade effect only in IE; degrades gracefully
+
+// =======================================
+// set the following variables
+// =======================================
+
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 5000
+
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'images/slideshow/Focus1.png'
+Pic[1] = 'images/slideshow/Focus2.png'
+Pic[2] = 'images/slideshow/Focus3.png'
+Pic[3] = 'images/slideshow/Focus4.png'
+Pic[4] = 'images/slideshow/Focus5.png'
+Pic[5] = 'images/slideshow/Focus6.png'
+Pic[6] = 'images/slideshow/Focus7.png'
+Pic[7] = 'images/slideshow/Focus8.png'
+Pic[8] = 'images/slideshow/Focus9.png'
+Pic[9] = 'images/slideshow/Focus10.png'
+Pic[10] = 'images/slideshow/Focus11.png'
+Pic[11] = 'images/slideshow/Focus12.png'
+Pic[12] = 'images/slideshow/Focus14.png'
+
+// =======================================
+// do not edit anything below this line
+// =======================================
+
+var t
+var j = 0
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+preLoad[i] = new Image()
+preLoad[i].src = Pic[i]
+}
+
+function runSlideShow(){
+if (document.all){
+document.images.SlideShow.style.filter="blendTrans(duration=2)"
+document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)"
+document.images.SlideShow.filters.blendTrans.Apply() 
+}
+document.images.SlideShow.src = preLoad[j].src
+if (document.all){
+document.images.SlideShow.filters.blendTrans.Play()
+}
+j = j + 1
+if (j > (p-1)) j=0
+t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+</script>
+
+
+      <link rel="stylesheet" type="text/css" href="css/leftmenu-menu.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/superfish-vertical.css" media="screen">
+
+</head>	
+<body onload="runSlideShow()">  
+<div id="outer">
+	<div id="left" class="divtest">
+<br><br><br><br>
+<!-- <link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> -->
+
+
+
+
+<!--  -----------------------  Enter LEFT Content ---------------------- -->
+<br><br>
+<ul class="leftmenu-menu sf-vertical">
+  <li><a href="index.html">Home</a></li>
+  <li>
+    <a href="people.php">People</a>
+    <ul>
+        <li><a href="people.php">Directory Search</a></li>
+        <li><a href="facultylist.php">Faculty</a></li>
+        <li><a href="stafflist.php">Staff</a></li>
+        <li><a href="researcherlist.php">Researchers</a></li>
+        <li><a href="gslist.php">Graduate Students</a></li>
+        <li><a href="visitorlist.php">Visitors</a></li>
+    </ul>
+  </li>
+  <li><a href="research.php">Research</a></li>
+  <li>
+    <a href="upcominglist.php">Upcoming Events</a>
+    <ul>
+        <li><a href="calendar.php">IQSE calendar</a></li>
+        <li><a href="eventlist.php">Event List</a></li>
+    </ul>
+  </li>
+  <li><a href="http://iqse.tamu.edu/ART">ART Programs</a></li>
+  <li><a href="outreach.php">Outreach</a></li>
+  <li><a href="contactpage.php">Contact</a></li>
+  <li>
+    <a href="">Useful Links</a>
+    <ul>
+        <li><a href="http://physics.tamu.edu">TAMU Physics & Astronomy</a></li>
+        <li><a href="http://ctp.tamu.edu">CTP</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+			 			
+	</div>
+<!--  -----------------------  Begin Center Content ---------------------- -->
+	<div id="centrecontent">
+
+		
+<!--<center> Quick Links: &nbsp&nbsp 
+		   		<a href="#faculty">Faculty</a>&nbsp&nbsp 
+				<a href="#staff">Staff</a>&nbsp&nbsp
+				<a href="#researchers">Researchers</a>&nbsp&nbsp
+				<a href="#gs">Graduate Students</a>&nbsp&nbsp 
+				<a href="#visitors">Visitors</a>&nbsp&nbsp	<br><br/></center>
+				
+	<br>	
+<div style=" text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="98%" border="0" cellpadding="2" cellspacing="2" style="border-width: 0px; background-color: #ffffff;">
+</table>-->
+
+<!-- ============================== Enter Center Content ============================  -->
+<div align="center"><br><small>&nbsp&nbsp 
+				<a href="upcomingmeetings.php" title="Upcoming meetings">Upcoming Meetings</a>&nbsp&nbsp 
+				<a href="justforstudents.php" title="Just For Students">Just For Students</a>&nbsp&nbsp
+				<a href="positions.php" title="positions">Positions Available</a>&nbsp&nbsp
+				<a href="new2iqse.php" title="new2iqse">New to IQSE</a>&nbsp&nbsp
+				</small></div><br>
+
+<div align="center"><h2> 
+<font color="500000">FEATURED RESEARCH ACTIVITIES</font></h2></div><br>
+
+<center>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td id="VU" height=150 width=150>
+<img src="1.jpg" name='SlideShow' width=500 height=500></td>
+</tr>
+</table>
+</center>
+
+<br><br><br><br><br>
+ <hr><center><br>
+<p class="c2">Last update: November 8, 2012</p></center><br>	 
+<!-- ============================== STOP Center Content Entry ============================  -->
+
+ 	</div>
+	<div id="clearfooter"></div>
+	<!-- to clear footer -->
+</div>
+<!--  -----------------------  End Center Content ---------------------- -->
+<!-- end outer div -->
+
+<!--  -----------------------  Enter FOOTER Content ---------------------- -->
+
+<div id="footer">
+  
+  		 <br>
+         <a title="Texas A&amp;M University"
+		 href="http://www.tamu.edu"
+		 target="_blank" style="color: white">Texas A&amp;M University</a> 
+-
+	      <a title="College of Science"
+		 href="http://www.science.tamu.edu"
+		 target="_blank" style="color: white">College of Science</a> <br/>
+
+	      <a title="Accessibility"
+		 href="http://itaccessibility.tamu.edu/"
+		 target="_blank" style="color: white">Accessibility</a>
+-
+	      <a title="Privacy &amp; Security"
+		 href="../privacy/privacy.html" style="color: white">Privacy &amp; Security</a>
+-
+	      <a title="Webmaster"
+		 href="mailto:tctp@tamu.edu"
+		 target="_blank" style="color: white">Webmaster</a><br/><br/>
+	
+	
+		 
+	<hr style="width: 50%"/>
+
+   <FONT COLOR="#FFFFFF"> 
+   Copyright &copy; 2011, Texas A&amp;M University, The Agri-photonics Research and Teaching Program, All Rights Reserved.<br/>
+College Station, TX 77843-4242  |  (979) 458-7942  |  Fax (979) 458-7931 <br><br/>
+	
+</div>
+
+<!--  -----------------------  Enter HEADER Content ---------------------- -->
+
+<div id="header">
+<table>
+<tr><td style="vertical-align: top; padding-left: 2px; width: 9%;" columnspan="2">
+<a href="http://www.tamu.edu/" title="TexasA&amp;M University Home"><img src="images/primaryMark.gif" width="130" align="top" alt="Texas A&amp;M University primary mark" title="TAMULogo" border="0" /></a>           
+</td>
+<td>
+<center><a href="http://iqse.tamu.edu" title="IQSE Home"><img src="images/iqseText.jpg" width="500" height="82" align="middle" alt="IQSE Banner" title="IQSE Home" border="0" /></a></center>
+</td></tr>
+</table>
+
+</div>
+
+</body>
+
+</html>
+
+

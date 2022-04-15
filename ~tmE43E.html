@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="created" content="Wed, 17 Nov 2010 21:05:45 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IQSE</title>
+
+<LINK REL=StyleSheet HREF="person.css" TITLE="basic-1"/>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
+ 
+     
+ 
+
+      <link rel="stylesheet" type="text/css" href="css/leftmenu-menu.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/superfish-vertical.css" media="screen">
+
+</head>
+
+
+<body>
+<div id="outer">
+	<div id="left" class="divtest">
+<br><br><br><br>
+<!--  -----------------------  Enter LEFT Content ---------------------- -->
+<br><br><br><br>
+<ul class="leftmenu-menu sf-vertical">
+  <li><a href="http://ctp.tamu.edu">Home</a></li>
+  <li>
+    <a href="http://">People</a>
+    <ul>
+        <li><a href="http://ctp.tamu.edu/facultylist.php">Faculty</a></li>
+        <li><a href="http://ctp.tamu.edu/researcherlist.php">Researchers</a></li>
+        <li><a href="http://ctp.tamu.edu/gslist.php">Graduate Students</a></li>
+        <li><a href="http://ctp.tamu.edu/visitorlist.php">Visitors</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="http://">Research</a>
+    <ul>
+        <li><a href="http://ctp.tamu.edu/research/researchbuild.html">Research Topic I</a></li>
+        <li><a href="http://ctp.tamu.edu/research/researchbuild.html">Research Topic II</a></li>
+        <li><a href="http://ctp.tamu.edu/research/researchbuild.html">Research Topic III</a></li>
+    </ul>
+  </li>
+  <li><a href="http://ctp.tamu.edu/news/newslist.php">Newsworthy</a></li>
+  <li><a href="http://ctp.tamu.edu/contact.html">Contact</a></li>
+</ul>
+
+
+
+			 			
+	</div>
+<!--  -----------------------  Begin Center Content ---------------------- -->
+	<div id="centrecontent">
+
+		
+<!--<center> Quick Links: &nbsp&nbsp 
+		   		<a href="#faculty">Faculty</a>&nbsp&nbsp 
+				<a href="#staff">Staff</a>&nbsp&nbsp
+				<a href="#researchers">Researchers</a>&nbsp&nbsp
+				<a href="#gs">Graduate Students</a>&nbsp&nbsp 
+				<a href="#visitors">Visitors</a>&nbsp&nbsp	<br><br/></center>
+				
+	<br>	
+<div style=" text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="98%" border="0" cellpadding="2" cellspacing="2" style="border-width: 0px; background-color: #ffffff;">
+</table>-->
+
+<!-- ============================== Enter Center Content ============================  -->
+
+<?
+
+$db="SS2011db";
+$link = mysql_connect('sql.physics.tamu.edu', 'iqsedb1', 'Iqse4u^2');
+if (! $link)
+die("Couldn't connect to MySQL");
+
+mysql_select_db($db , $link)
+or die("Couldn't open $db: ".mysqli_error());
+?>
+
+<table width="98%" cellpadding="5" border="0">
+<tr bgcolor="500000" valign="middle">
+<tr>
+<td>
+<div align="center"><font size="5"><b>FACULTY</b></font></div>
+</td>
+</tr>
+</table>
+
+<table width="98%" cellpadding="5" border="0">
+<tr bgcolor="500000" valign="middle">
+<td align="center" width ="30%"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="-1" color="#f5f5f5"><b>Name</b></font></td>
+<td align="center" width ="30%"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="-1" color="#f5f5f5"><b>Email</b></font></td>
+<td align="center" width ="18%"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="-1" color="#f5f5f5"><b>Phone (Office/Lab)</b></font></td>
+<td align="center" width ="20%"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="-1" color="#f5f5f5"><b>Office/Lab</b></font></td>
+</tr></table>
+					 
+
+<?
+$query=" SELECT * FROM IQSEpeople WHERE classification='faculty' ORDER BY last ASC";
+$result=mysqli_query($link, $query);
+$num=mysqli_num_rows($result);
+$i=0;
+while ($i < $num) {
+$first=mysql_result($result,$i,"first");
+$last=mysql_result($result,$i,"last");
+$email=mysql_result($result,$i,"email");
+$ophone=mysql_result($result,$i,"ophone");
+$lphone=mysql_result($result,$i,"lphone");
+$oloc=mysql_result($result,$i,"oloc");
+$lloc=mysql_result($result,$i,"lloc");
+$uname=mysql_result($result,$i,"uname");
+$classification=mysql_result($result,$i,"classification");
+?>
+
+<center>
+
+<table width="98%">
+<tr valign="top">
+<td width="30%">
+<small><? if($classification='faculty'){echo "<a href=\"faculty.php?uname=".$uname."\"> ".$first." ".$last." </a>";}
+elseif($classification='researcher'){echo "<a href=\"researcher.php?uname=".$uname."\"> ".$first." ".$last." </a>";}
+else{echo "<a href=\"staff.php?uname=".$uname."\"> ".$first." ".$last."  </a>";}?></small><br><br>
+
+</td>
+<td width="30%">
+<small><a href="mailto:<? echo "$email" ?>"><? echo "$email"?></a></small>
+</td>
+<td width="18%">
+<small><? echo "$ophone"?><br><? echo "$lphone"?></small>
+</td>
+<td width="20%">
+<small><? echo "$oloc"?><br><? echo "$lloc"?></small>
+</td></tr>
+</table>
+<?
+++$i;
+}
+
+?>
+
+
+<br><br><br><br><br>
+ <hr><center><br>
+<p class="c2">Last update: November 11, 2011</p></center><br>	 
+<!-- ============================== STOP Center Content Entry ============================  -->
+
+ 	</div>
+	<div id="clearfooter"></div>
+	<!-- to clear footer -->
+</div>
+<!--  -----------------------  End Center Content ---------------------- -->
+<!-- end outer div -->
+
+<!--  -----------------------  Enter FOOTER Content ---------------------- -->
+
+<div id="footer">
+  
+  		 <br>
+         <a title="Texas A&amp;M University"
+		 href="http://www.tamu.edu"
+		 target="_blank" style="color: white">Texas A&amp;M University</a> 
+-
+	      <a title="College of Science"
+		 href="http://www.science.tamu.edu"
+		 target="_blank" style="color: white">College of Science</a> <br/>
+
+	      <a title="Accessibility"
+		 href="http://itaccessibility.tamu.edu/"
+		 target="_blank" style="color: white">Accessibility</a>
+-
+	      <a title="Privacy &amp; Security"
+		 href="../privacy/privacy.html" style="color: white">Privacy &amp; Security</a>
+-
+	      <a title="Webmaster"
+		 href="mailto:tctp@tamu.edu"
+		 target="_blank" style="color: white">Webmaster</a><br/><br/>
+	
+	
+		 
+	<hr style="width: 50%"/>
+
+   <FONT COLOR="#FFFFFF"> 
+   Copyright &copy; 2011, Texas A&amp;M University, The Center for Theoretical Physics, All Rights Reserved.<br/>
+College Station, TX 77843-4242  |  (979) 845-7717  |  Fax (979) 845-2590 <br><br/>
+	
+</div>
+
+<!--  -----------------------  Enter HEADER Content ---------------------- -->
+
+<div id="header">
+<table>
+<tr><td style="vertical-align: top; padding-left: 2px; width: 9%;" columnspan="2">
+<a href="http://www.tamu.edu/" title="TexasA&amp;M University Home"><img src="images/primaryMark.gif" width="135" height="45" align="top" alt="Texas A&amp;M University primary mark" title="TAMULogo" border="0" /></a>           
+</td>
+<td>
+<center><a href="http://ctp.tamu.edu" title="Center Home"><img src="images/CTPText.jpg" width="525" height="90" align="middle" alt="CTP Banner" title="CTP Home" border="0" /></a></center>
+</td></tr>
+</table>
+ 
+</div>
+
+</body>
+
+</html>
+
